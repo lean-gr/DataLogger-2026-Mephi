@@ -3,7 +3,9 @@
 #include "lcd.h"   // Драйвер ST7735
 #include "ugui.h"
 #include <stdio.h>
+#include "ds18b20.h"
 
+float current_temperature = 0.0f;
 
 void super_loop(void) {
     char buf[24];
@@ -11,6 +13,8 @@ void super_loop(void) {
 
     while (1) {
         rawCounterProcess();
+
+        current_temperature = DS18B20_ReadTemperature();
 
         if (HAL_GetTick() - last >= 100) {
             last = HAL_GetTick();
