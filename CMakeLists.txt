@@ -52,6 +52,9 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # --- Драйвер ST7735 (LCD) ---
     ${CMAKE_SOURCE_DIR}/Drivers/st7735/LCD/lcd.c
     ${CMAKE_SOURCE_DIR}/Drivers/st7735/LCD/images.c
+            
+        # --- Библиотека DS18B20 ---
+    ${CMAKE_SOURCE_DIR}/Drivers/ds18b20/ds18b20.c
 
     # --- Библиотека UGUI ---
     ${CMAKE_SOURCE_DIR}/Drivers/st7735/UGUI/ugui.c
@@ -67,6 +70,9 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/Drivers/st7735/UGUI/Fonts/font_16x26.c
     ${CMAKE_SOURCE_DIR}/Drivers/st7735/UGUI/Fonts/font_8x12.c
     ${CMAKE_SOURCE_DIR}/Drivers/st7735/UGUI/Fonts/arial_10X13_cyrillic.c
+        # --- Путь к заголовкам DS18B20 ---
+    ${CMAKE_SOURCE_DIR}/Drivers/ds18b20
+
 )
 
 # Add include paths
